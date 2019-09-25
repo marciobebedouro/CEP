@@ -3,6 +3,7 @@ import {View} from 'react-native';
 import axios from 'axios';
 import ItensComponent from './itens_Cep_Components';
 const url = 'https://viacep.com.br/ws/14700570/json/';
+// const url2 = 'https://viacep.com.br/ws/01001000/json/';
 
 export default class ListComponent extends Component {
   constructor(props) {
@@ -15,6 +16,18 @@ export default class ListComponent extends Component {
     this.setState({listaItens:[itens.data]});
     console.log(itens);
   }
+
+  
+  // async UNSAFE_componentWillMount() {
+  //   const itens = await axios.get(url2);
+  //   this.setState({listaItens:[itens.data]});
+  //   console.log(itens);
+  // }
+
+
+
+
+
 
   render() {
     return (
